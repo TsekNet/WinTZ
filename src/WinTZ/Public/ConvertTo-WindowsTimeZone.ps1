@@ -26,12 +26,12 @@
   try {
     $url = "https://raw.githubusercontent.com/unicode-org/cldr/master/common/supplemental/windowsZones.xml"
     [xml]$xml = (Invoke-WebRequest -Uri $url -ContentType 'application/xml').Content
-    $zones = $xml.supplementalData.windowsZones.mapTimezones.mapZone | Where-Object territory -Match 001
   }
   catch {
     throw "Failed to obtain time zone XML map from GitHub: $_"
   }
 
+  $zones = $xml.supplementalData.windowsZones.mapTimezones.mapZone | Where-Object territory -Match 001
   $win_tz = ($zones | Where-Object type -Match $IANATimeZone).other
 
   Write-Verbose "IANA Time Zone ($IANATimeZone) = Windows Time Zone ($win_tz)"

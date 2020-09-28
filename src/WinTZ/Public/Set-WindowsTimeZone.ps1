@@ -40,12 +40,12 @@
 
   Write-Output "Setting Windows Time Zone to $windows_time_zone"
 
-  try {
-    if ($Force -or $PSCmdlet.ShouldProcess('Windows Time Zone', 'set')) {
+  if ($Force -or $PSCmdlet.ShouldProcess('Windows Time Zone', 'set')) {
+    try {
       Set-TimeZone -Name $windows_time_zone
     }
-  }
-  catch {
-    throw "Failed to set timezone: $_"
+    catch {
+      throw "Failed to set timezone: $_"
+    }
   }
 }
