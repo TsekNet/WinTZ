@@ -18,18 +18,22 @@ Install-Module -Name WinTZ -Repository PSGallery -Scope CurrentUser
 
 ## Usage
 
+Set the Windows time zone based on public IP address, without prompting for
+confirmation
+
 ```powershell
-# Set the Windows time zone based on public IP address, without prompting for confirmation
 Set-WindowsTimeZone -Force
 ```
 
+Returns the IANA Time Zone based on public IP address.
+
 ```powershell
-# Returns the IANA Time Zone based on public IP address.
 Get-IANATimeZone
 ```
 
+Takes an IANA time zone and converts it to a Windows time zone.
+
 ```powershell
-# Takes an IANA time zone and converts it to a Windows time zone.
 ConvertTo-WindowsTimeZone
 ```
 
@@ -39,7 +43,7 @@ more information on individual functions.
 
 ## Screenshots
 
-TBA
+![Demo](media/demo.png)
 
 ## Contributing
 
