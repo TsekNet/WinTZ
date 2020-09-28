@@ -31,11 +31,16 @@
     [switch]$Force
   )
 
-  $windows_time_zone = ConvertTo-WindowsTimeZone -IANATimeZone $IANATimeZone
+  if ($IANATimeZone) {
+    $windows_time_zone = ConvertTo-WindowsTimeZone -IANATimeZone $IANATimeZone
+  } else {
+    $windows_time_zone = ConvertTo-WindowsTimeZone
+  }
+
   Write-Output "Setting Windows Time Zone to $windows_time_zone"
 
   try {
-    if ($Force -or $PSCmdlet.ShouldProcess('Windows Time Zone', 'overwrite')) {
+    if ($Force -or $PSCmdlet.ShouldProcess('Windows Time Zone', 'set')) {
       Set-TimeZone -Name $windows_time_zone
     }
   }
