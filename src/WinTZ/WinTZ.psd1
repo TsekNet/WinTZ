@@ -12,7 +12,7 @@
   RootModule        = 'WinTZ.psm1'
 
   # Version number of this module.
-  ModuleVersion     = '0.1.0'
+  ModuleVersion     = '0.1.1'
 
   # Supported PSEditions
   # CompatiblePSEditions = @()
@@ -101,16 +101,17 @@
       # Tags applied to this module. These help with module discovery in online galleries.
       Tags                     = @(
         'Catesta',
+        'convert',
         'custom',
         'GitHub-Actions',
         'GitHub',
+        'iana',
         'Plaster',
         'powershell',
         'pwsh',
-        'time zone',
         'timezone',
-        'windows time zone',
-        'Windows'
+        'Windows',
+        'windowstimezone'
       )
 
       # A URL to the license for this module.
@@ -120,7 +121,7 @@
       RequireLicenseAcceptance = $false
 
       # A URL to the main website for this project.
-      ProjectUri               = 'https://tseknet.com'
+      ProjectUri               = 'https://github.com/TsekNet/WinTZ'
 
       # A URL to an icon representing this module.
       IconUri                  = 'https://tseknet.com/assets/icons/icon-192x192.png'
