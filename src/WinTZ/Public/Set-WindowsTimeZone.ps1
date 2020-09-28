@@ -33,7 +33,8 @@
 
   if ($IANATimeZone) {
     $windows_time_zone = ConvertTo-WindowsTimeZone -IANATimeZone $IANATimeZone
-  } else {
+  }
+  else {
     $windows_time_zone = ConvertTo-WindowsTimeZone
   }
 

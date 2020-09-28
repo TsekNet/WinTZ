@@ -36,6 +36,13 @@ ConvertTo-WindowsTimeZone 'America/New_York'
 
 Returns the Windows time zone 'Eastern Standard Time'
 
+### EXAMPLE 2
+```
+ConvertTo-WindowsTimeZone
+```
+
+Returns the Windows time zone based on the public IP address.
+
 ## PARAMETERS
 
 ### -IANATimeZone
