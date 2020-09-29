@@ -3,14 +3,11 @@
   .SYNOPSIS
     Sets the Windows time zone.
   .DESCRIPTION
-    This prompt adds the following functionality:
+   By Default, this function automatically determines the Windows Time Zone from
+   the host's public IP address.
 
-    - Invocation ID count (how many times a command was executed)
-    - The custom output of the current directory, with optional trimming if the current directory is determined to be too long.
-    - Posh-Git integration
-    - Built-in timers for each command executed in the console
-    - The current local time
-    - A custom ASCII symbol placed before the cursor
+   Optionally, a IANATimeZone can be specified, such as 'America/New_York' to be
+   converted into a Windows time zone.
   .EXAMPLE
     Set-WindowsTimeZone -Force
     Sets the Windows time zone based on public IP address, without prompting for

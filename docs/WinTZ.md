@@ -2,7 +2,7 @@
 Module Name: WinTZ
 Module Guid: c3626110-388f-4222-9b78-43052cf2264f
 Download Help Link: NA
-Help Version: 0.1.1
+Help Version: 0.2.1
 Locale: en-US
 ---
 
