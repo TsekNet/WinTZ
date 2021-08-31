@@ -20,12 +20,12 @@
   #>
   [CmdletBinding()]
   param (
-    [string]$IPAddress = (Invoke-WebRequest -Uri 'https://ifconfig.me/ip' -ContentType 'text/plain').Content.Trim()
+    [string]$IPAddress = (Invoke-WebRequest -Uri 'https://ifconfig.me/ip' -ContentType 'text/plain' -UseBasicParsing).Content.Trim()
   )
   Write-Verbose "Public IP: $IPAddress"
 
   try {
-    $iana_tz = (Invoke-RestMethod -Method Get -Uri "http://ip-api.com/json/$IPAddress").timezone
+    $iana_tz = (Invoke-RestMethod -Method Get -Uri "http://ip-api.com/json/$IPAddress" -UseBasicParsing).timezone
   }
   catch {
     throw "Failed to get public IP address: $_"

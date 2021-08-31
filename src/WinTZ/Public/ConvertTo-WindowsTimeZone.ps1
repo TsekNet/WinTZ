@@ -24,8 +24,8 @@
     [string]$IANATimeZone = (Get-IANATimeZone)
   )
   try {
-    $url = "https://raw.githubusercontent.com/unicode-org/cldr/master/common/supplemental/windowsZones.xml"
-    [xml]$xml = (Invoke-WebRequest -Uri $url -ContentType 'application/xml').Content
+    $url = 'https://raw.githubusercontent.com/unicode-org/cldr/master/common/supplemental/windowsZones.xml'
+    [xml]$xml = (Invoke-WebRequest -Uri $url -ContentType 'application/xml' -UseBasicParsing).Content
   }
   catch {
     throw "Failed to obtain time zone XML map from GitHub: $_"
